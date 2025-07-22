@@ -1,0 +1,752 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+  z-index: 999;
+  transition: background-color 0.3s ease;
+}
+
+nav.transparent {
+  background-color: transparent;
+}
+
+nav.scrolled {
+  background-color: rgb(32, 32, 32);
+}
+
+.nav-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0px;
+  margin-top: 10px;
+}
+
+.nav-links li {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-links li:hover,
+.nav-links li.active {
+  color: #ff6600;
+}
+
+.nav-links li.active::after,
+.nav-links li:hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #ff6600;
+  bottom: -6px;
+  left: 0;
+}
+
+/* Header Section */
+header {
+  background: url('https://themewagon.github.io/food-funday/images/banner.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.typing-effect {
+  font-family: 'Great Vibes', cursive;
+  font-size: 64px;
+  word-spacing: 10px;
+}
+
+.typing-effect::after {
+  content: "Family";
+  color: orange;
+  animation: rotateWords 7s steps(1) infinite;
+}
+
+@keyframes rotateWords {
+  0%, 33% { content: "Family"; }
+  34%, 66% { content: "Friends"; }
+  67%, 100% { content: "Officemates"; }
+}
+
+
+header h3 {
+  color: orange;
+  margin-top: 10px;
+  
+}
+
+header p {
+  margin: 20px 0;
+  max-width: 700px;
+}
+
+header button {
+  background: orange;
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+header button:hover {
+  background: darkorange;
+}
+
+/* About Section */
+.about-section {
+  background-color: #e6e6e6;
+  padding: 80px 20px 50px;
+}
+
+.about-wrapper {
+  max-width: 1140px;
+  margin: auto;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-left {
+  flex: 1;
+}
+
+.abt{
+  margin-left: 10px;
+}
+.about-left h2 {
+  font-size: 42px;
+  color: #f06529;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.about-left h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-left p {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.about-right {
+  flex: 1;
+  position: relative;
+  min-width: 300px;
+  height: 400px;
+}
+
+.circle {
+  border-radius: 50%;
+  overflow: hidden;
+  border: 9px solid white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: absolute;
+}
+
+.circle.large {
+  width: 410px;
+  height: 400px;
+  bottom: 0;
+  right: 0;
+}
+
+.circle.small {
+  width: 170px;
+  height: 170px;
+  top: -15px;
+  right: -30px;
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive: Stack on smaller screens */
+@media (max-width: 991px) {
+  .about-wrapper {
+    flex-direction: column;
+  }
+
+  .circle {
+    position: relative;
+    margin-bottom: 20px;
+  }
+}
+
+/* Special Section (Today's Special) */
+.special-section {
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://themewagon.github.io/food-funday/images/gallery_06.jpg') no-repeat center center/cover;
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+}
+
+.special-section h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 48px;
+  color: #ff6600;
+}
+
+.special-section p {
+  font-size: 16px;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+/* Carousel Styles */
+ .carousel-item img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border: 3px solid white;
+    }
+
+    .carousel-inner {
+      display: flex;
+      align-items: center;
+    }
+
+    .carousel .carousel-indicators button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 3px solid orange;
+    }
+
+    .carousel .carousel-indicators .active {
+      background-color: solid white;
+      border: 4px solid orange;
+      /* margin-bottom: -90px; */
+    }
+
+@media (min-width: 768px) {
+  .carousel-inner .carousel-item > div {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .carousel-inner .carousel-item > div > img {
+    width: 300px;
+  }
+}
+ 
+.our h3{
+  color: #ff6600;
+  margin-top: 20px;
+  font-family:'Times New Roman', Times, serif;
+  text-align: center;
+  font-size: 50px;
+}
+.our p{
+  text-align: center;
+  font-size: 18px;
+  max-width:910px;
+  margin: 0 auto 40px;
+
+}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 48px;
+      text-align: center;
+      margin-bottom: 10px;
+      color: orange;
+    }
+
+    .title-caption {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 60px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Team Section */
+    #our_team {
+      position: relative;
+      background: url('https://themewagon.github.io/food-funday/images/team_bg.jpg') no-repeat center center/cover;
+      padding: 100px 20px;
+      color: white;
+    }
+
+    #our_team::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5); /* Dark overlay */
+      backdrop-filter: blur(1px);
+      z-index: 1;
+    }
+
+    #our_team h2,
+    #our_team .title-caption,
+    #our_team .team-container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .team-container {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .team-card {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      width: calc(33.333% - 20px);
+      text-align: center;
+      color: #333;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .team-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .team-card h3 {
+      font-size: 22px;
+      margin: 15px 0 5px;
+      font-weight: 600;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .team-card p {
+      font-size: 14px;
+      padding: 0 15px 15px;
+      color: #666;
+    }
+
+    .team-social-icons {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .team-social-icons a {
+      color: black;
+      font-size: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .team-social-icons a:hover {
+      color: orange;
+    }
+
+    /* Gallery Section */
+    .gallery-main {
+      background: #fff;
+      padding: 80px 130px;
+
+    }
+
+    .gal-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      /* margin-top: 40px; */
+    }
+
+    .gal-item {
+      margin: 10px;
+      overflow: hidden;
+      /* border-radius: 10px; */
+    }
+
+    .gal-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: 0.3s ease;
+    }
+
+    .gal-item:hover img {
+      transform: scale(1.05);
+    }
+
+    @media (min-width: 768px) {
+      .col-md-4 {
+        width: 30%;
+      }
+      .col-md-8 {
+        width: 62%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .col-md-4, .col-md-8 {
+        width: 90%;
+      }
+
+      .team-card {
+        width: 100%;
+      }
+
+      h2 {
+        font-size: 36px;
+      }
+    }
+
+      body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+
+    .menu-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .menu-section h2 {
+      color: #ec5e20;
+      font-size: 36px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .menu-section p {
+      color: #666;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+
+    .menu-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background-color: #f8f8f8;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      padding-bottom: 30px;
+    }
+
+    .menu-tabs {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+    }
+
+    .tab {
+      flex: 1;
+      padding: 20px;
+      border-bottom: 1px solid #ddd;
+      cursor: pointer;
+      font-weight: bold;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      border-right: 1px solid #ddd;
+    }
+
+    .tab:last-child {
+      border-right: none;
+    }
+
+    .tab.active {
+      background-color: #ec5e20;
+      color: #fff;
+    }
+
+    .tab .icon {
+      margin-top: 10px;
+      font-size: 28px;
+    }
+
+    .menu-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      width: 48%;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+      background-color: transparent;
+    }
+
+    .item img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-right: 20px;
+      border: 4px solid #fff;
+    }
+
+    .item .text {
+      text-align: left;
+      flex: 1;
+    }
+
+    .item .text h4 {
+      margin: 0 0 5px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: #ec5e20;
+      font-size: 18px;
+    }
+
+    .item .text p {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .price {
+      margin-left: 20px;
+      border: 1px solid #ec5e20;
+      border-radius: 50%;
+      padding: 12px 18px;
+      font-weight: bold;
+      color: #000;
+      font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .item {
+        width: 100%;
+      }
+    }
+
+    
+
+    .pad-top-100 { padding-top: 100px; }
+    .pad-bottom-100 { padding-bottom: 100px; }
+    .text-center { text-align: center; }
+    .block-title {
+      font-size: 40px;
+      color: #e75b1e;
+      font-family: 'Great Vibes', cursive;
+      
+    }
+    .pricing-main p,
+    #blog p,
+    #reservation p {
+      max-width: 700px;
+      margin: 0 auto 50px;
+      color: #333;
+      font-size: 16px;
+      justify-content: center;
+      align-items: center;
+    }
+    .panel-pricing {
+      border: 1px solid #e75b1e;
+      margin: 20px 0;
+      transition: all 0.3s ease;
+    }
+    .panel-pricing:hover {
+      margin-top: -8px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    }
+    .panel-heading {
+      background-color: #e75b1e;
+      color: #fff;
+      padding: 20px;
+    }
+    .panel-heading img {
+      width: 60px;
+    }
+    .panel-body {
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    .panel-body strong {
+      font-size: 40px;
+      color: #000;
+    }
+    .list-group-item {
+      border: none;
+      padding: 10px;
+    }
+    .panel-footer a {
+      background-color: #e75b1e;
+      color: white;
+      padding: 15px;
+      display: block;
+      text-decoration: none;
+    }
+    #blog .thumbnail img {
+      width: 100%;
+      height: auto;
+    }
+    /* Blog Section */
+    #blog {
+      background-image: url('https://themewagon.github.io/food-funday/images/blog_bg.jpg');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+    .blog-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .blog-block {
+      background: #fff;
+      color: #000;
+      width: 45%;
+      display: flex;
+      margin-bottom: 30px;
+    }
+    .blog-img-box {
+      width: 50%;
+      position: relative;
+    }
+    .blog-img-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: 0.3s;
+    }
+    .blog-img-box:hover .overlay {
+      opacity: 1;
+    }
+    .blog-dit {
+      width: 50%;
+      padding: 20px;
+    }
+
+
+    /* reservation part */
+    #reservation input, #reservation textarea {
+      margin-bottom: 15px;
+    }
+    .btn-primary {
+      background-color: #e75b1e;
+      border: none;
+      border-radius: 0px;
+      font-size: 18px;
+      letter-spacing: 1px;
+      font-weight: bold;
+      padding: 15px 25px;
+    }
+    .btn-default {
+      border-color: #e75b1e;
+      color: #e75b1e;
+    }
+
+      .footer-news {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://themewagon.github.io/food-funday/images/newsletter-bg.jpg') center/cover no-repeat;
+      /* background-image: url(); */
+      background-size: cover;
+      padding: 100px 0 70px;
+      color: white;
+      text-align: center;
+    }
+    .footer-news input {
+      width: 60%;
+      padding: 12px;
+      border: 2px dotted #ccc;
+      border-radius: 4px;
+    }
+    .footer-news a {
+      display: inline-block;
+      background: #e75b1e;
+      color: white;
+      padding: 12px 20px;
+      margin-left: -5px;
+    }
+    #footer {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://themewagon.github.io/food-funday/images/footer_background.jpg') center/cover no-repeat;
+      /* padding: 0px 0; */
+      color: white;
+    }
+    .footer-section {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .footer-section div {
+      max-width: 250px;
+      margin-bottom: 20px;
+    }
+    .footer-section h3 {
+      color: #e75b1e;
+      font-weight: bold;
+    }
+    .footer-bottom {
+      text-align: center;
+      padding: 15px;
+      background: #e75b1e;
+      color: white;
+      font-size: 14px;
+    }

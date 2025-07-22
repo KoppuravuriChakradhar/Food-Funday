@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>main html (humanize)</title>
+
+  <!-- Linking Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="mainn.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="transparent" id="navbar">
+  <div class="nav-content">
+    <div class="logo">
+      <img src="https://themewagon.github.io/food-funday/images/logo.png" alt="Logo">
+    </div>
+    <ul class="nav-links">
+      <li class="active">HOME</li>
+      <li>ABOUT US</li>
+      <li>MENU</li>
+      <li>TEAM</li>
+      <li>GALLERY</li>
+      <li>BLOG</li>
+      <li>PRICING</li>
+      <li>RESERVATION</li>
+      <li>CONTACT US</li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section (Header) -->
+<header>
+  <div class="typing-effect">Dinner with us</div>
+  <h3>Accidental appearances</h3>
+  <p>Welcome to our cozy restaurant. Enjoy delicious meals with your loved ones!</p>
+  <button>BOOK MY TABLE</button>
+</header>
+
+<!-- About Section -->
+<section class="about-section">
+  <div class="about-wrapper">
+    <div class="about-left">
+      <h2 >About Us</h2>
+      <h3>It started, quite simply, like this...</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia, nostrud exercitation ullamco.</p>
+      <p>Aenean commodo ligula eget dolor aenean massa. Cum sociis nat penatibu set magnis dis parturient montes, nascetur ridiculus mus. quam felisorat, ultricies nec, Aenean commodo ligula eget dolor penatibu set magnis is parturient montes, nascetur ridiculus mus. quam felisorat, ultricies nec, pellentesque eu, pretium quis, sem. quat massa quis enim. Donec vitae sapien ut libero venenatis fauci Nullam quis ante. Etiam sit amet rci eget eros.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia, nostrud exercitation ullamco.</p>
+    </div>
+    <div class="about-right">
+      <div class="circle large">
+        <img src="https://themewagon.github.io/food-funday/images/about-main.jpg" alt="Main Dish">
+      </div>
+      <div class="circle small">
+        <img src="https://themewagon.github.io/food-funday/images/about-inset.jpg" alt="Side Dish">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Today's Special Section -->
+<section class="special-section">
+  <h2>Today's Special</h2>
+  <p>Every day brings something delicious. Here's what we have for you today!</p>
+
+  <!-- Bootstrap Carousel -->
+  <div id="specialCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div>
+          <img src="https://themewagon.github.io/food-funday/images/special-menu-3.jpg" alt="Dish 1">
+          <img src="https://themewagon.github.io/food-funday/images/special-menu-2.jpg" alt="Dish 2">
+          <img src="https://themewagon.github.io/food-funday/images/special-menu-1.jpg" alt="Dish 3">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div>
+          <img src="https://themewagon.github.io/food-funday/images/special-menu-2.jpg" alt="Dish 2">
+          <img src="https://themewagon.github.io/food-funday/images/special-menu-1.jpg" alt="Dish 3">
+          <img src="https://themewagon.github.io/food-funday/images/special-menu-3.jpg" alt="Dish 1">
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#specialCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#specialCarousel" data-bs-slide-to="1"></button>
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap JavaScript (for carousel) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Scroll Effect for Navbar Background Change -->
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.remove('transparent');
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.add('transparent');
+      navbar.classList.remove('scrolled');
+    }
+  });
+</script>
+
+<!-- our menu  -->
+ 
+
+  <section class="menu-section">
+    <h2>Our Menu</h2>
+    <p>
+      There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,
+      by injected humour, or randomised words which don't look even slightly believable.
+    </p>
+
+    <div class="menu-container">
+      <div class="menu-tabs">
+        <div class="tab active">
+          <strong>STARTERS</strong>
+          <div class="icon">🍜</div>
+        </div>
+        <div class="tab">
+          <strong>MAIN DISHES</strong>
+          <div class="icon">🍽️</div>
+        </div>
+        <div class="tab">
+          <strong>DESERTS</strong>
+          <div class="icon">☕</div>
+        </div>
+        <div class="tab">
+          <strong>DRINKS</strong>
+          <div class="icon">☕</div>
+        </div>
+      </div>
+
+      <div class="menu-items">
+        <div class="item">
+          <img src="https://themewagon.github.io/food-funday/images/menu-item-thumbnail-01.jpg" alt="Garlic Bread" />
+          <div class="text">
+            <h4>GARLIC BREAD</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.</p>
+          </div>
+          <div class="price">$8.5</div>
+        </div>
+
+        <div class="item">
+          <img src="https://themewagon.github.io/food-funday/images/menu-item-thumbnail-02.jpg" alt="BBQ Chicken Wings" />
+          <div class="text">
+            <h4>BBQ CHICKEN WINGS</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.</p>
+          </div>
+          <div class="price">$10</div>
+        </div>
+
+        <div class="item">
+          <img src="https://themewagon.github.io/food-funday/images/menu-item-thumbnail-03.jpg" alt="Mixed Salad" />
+          <div class="text">
+            <h4>MIXED SALAD</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.</p>
+          </div>
+          <div class="price">$25</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Team Section -->
+  <section id="our_team">
+    <h2>Our Team</h2>
+    <p class="title-caption">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+
+    <div class="team-container">
+      <div class="team-card">
+        <img src="https://themewagon.github.io/food-funday/images/staff-01.jpg" alt="John Doggett">
+        <h3>John Doggett</h3>
+        <p>Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Aenean commodo ligula.</p>
+        <div class="team-social-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <img src="https://themewagon.github.io/food-funday/images/staff-02.jpg" alt="Jeffrey Spender">
+        <h3>Jeffrey Spender</h3>
+        <p>Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Aenean commodo ligula.</p>
+        <div class="team-social-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <img src="https://themewagon.github.io/food-funday/images/staff-03.jpg" alt="Monica Reyes">
+        <h3>Monica Reyes</h3>
+        <p>Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Aenean commodo ligula.</p>
+        <div class="team-social-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <div id="gallery" class="gallery-main">
+    <h2>Our Gallery</h2>
+    <p class="title-caption">There are many variations of passages of Lorem Ipsum available</p>
+    <div class="gal-container">
+      <div class="gal-item col-md-8"><img src="https://themewagon.github.io/food-funday/images/gallery_01.jpg" alt="Gallery 1"></div>
+      <div class="gal-item col-md-4"><img src="https://themewagon.github.io/food-funday/images/gallery_02.jpg" alt="Gallery 2"></div>
+      <div class="gal-item col-md-4"><img src="https://themewagon.github.io/food-funday/images/gallery_03.jpg" alt="Gallery 3"></div>
+      <div class="gal-item col-md-4"><img src="gal-4.jpg"                                                      alt="Gallery 4"></div>
+      <div class="gal-item col-md-4"><img src="https://themewagon.github.io/food-funday/images/gallery_05.jpg" alt="Gallery 5"></div>
+      <div class="gal-item col-md-4"><img src="https://themewagon.github.io/food-funday/images/gallery_06.jpg" alt="Gallery 6"></div>
+      <div class="gal-item col-md-8"><img src="gallery_07.jpg"                                                 alt="Gallery 7"></div>
+      <div class="gal-item col-md-4"><img src="https://themewagon.github.io/food-funday/images/gallery_08.jpg" alt="Gallery 8"></div>
+      <div class="gal-item col-md-4"><img src="https://themewagon.github.io/food-funday/images/gallery_09.jpg" alt="Gallery 9"></div>
+      <div class="gal-item col-md-4"><img src="https://themewagon.github.io/food-funday/images/gallery_10.jpg" alt="Gallery 10"></div>
+    </div>
+  </div>
+
+
+
+
+     <!-- Blog Section -->
+  <div id="blog" class="pad-top-100 pad-bottom-100">
+    <div class="container">
+      <h2 class="block-title text-center">Our Blog</h2>
+      <div class="blog-box">
+        <!-- Blog 1 -->
+        <div class="blog-block">
+          <div class="blog-img-box">
+            <img src="https://themewagon.github.io/food-funday/images/featured-image-01.jpg" alt="">
+            <div class="overlay"><i class="fa fa-link fa-2x text-white"></i></div>
+          </div>
+          <div class="blog-dit">
+            <p><span>25 NOVEMBER, 2014</span></p>
+            <h4>LATEST RECIPES JUST IN!</h4>
+            <h5>BY John Doggett</h5>
+          </div>
+        </div>
+        <!-- Blog 2 -->
+        <div class="blog-block">
+          <div class="blog-img-box">
+            <img src="https://themewagon.github.io/food-funday/images/featured-image-02.jpg" alt="">
+            <div class="overlay"><i class="fa fa-link fa-2x text-white"></i></div>
+          </div>
+          <div class="blog-dit">
+            <p><span>2 NOVEMBER, 2014</span></p>
+            <h4>NEW RECRUITS HAVE ARRIVED!</h4>
+            <h5>BY Jeffrey Spender</h5>
+          </div>
+        </div>
+        <!-- Blog 3 -->
+        <div class="blog-block">
+          <div class="blog-img-box">
+            <img src="https://themewagon.github.io/food-funday/images/featured-image-03.jpg" alt="">
+            <div class="overlay"><i class="fa fa-link fa-2x text-white"></i></div>
+          </div>
+          <div class="blog-dit">
+            <p><span>4 NOVEMBER, 2014</span></p>
+            <h4>BAKING TIPS FROM THE PROS</h4>
+            <h5>BY Monica Reyes</h5>
+          </div>
+        </div>
+        <!-- Blog 4 -->
+        <div class="blog-block">
+          <div class="blog-img-box">
+            <img src="https://themewagon.github.io/food-funday/images/featured-image-04.jpg" alt="">
+            <div class="overlay"><i class="fa fa-link fa-2x text-white"></i></div>
+          </div>
+          <div class="blog-dit">
+            <p><span>12 NOVEMBER, 2014</span></p>
+            <h4>ALL YOUR EGGS BELONG TO US</h4>
+            <h5>BY John Doggett</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Pricing -->
+  <div id="pricing" class="pricing-main pad-top-100 pad-bottom-100">
+    <div class="container">
+      <h2 class="block-title text-center">Pricing</h2>
+      <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div class="row">
+        <!-- Basic Plan -->
+        <div class="col-md-4 text-center">
+          <div class="panel panel-pricing">
+            <div class="panel-heading">
+              <img src="https://themewagon.github.io/food-funday/images/store.png" alt="">
+              <h3>Basic</h3>
+            </div>
+            <div class="panel-body">
+              <p><strong>$30/<span>Month</span></strong></p>
+            </div>
+            <ul class="list-group">
+              <li class="list-group-item"><i class="fa fa-check"></i> One Website</li>
+              <li class="list-group-item"><i class="fa fa-check"></i> One User</li>
+              <li class="list-group-item"><i class="fa fa-check"></i> 10 GB Bandwidth</li>
+              <li class="list-group-item"><i class="fa fa-times"></i> 2GB Storage</li>
+              <li class="list-group-item"><i class="fa fa-times"></i> Offline work</li>
+              <li class="list-group-item"><i class="fa fa-check"></i> 24x7 Support</li>
+            </ul>
+            <div class="panel-footer"><a href="#">Purchase Now!</a></div>
+          </div>
+        </div>
+
+        <!-- Pro Plan -->
+        <div class="col-md-4 text-center">
+          <div class="panel panel-pricing">
+            <div class="panel-heading">
+              <img src="https://themewagon.github.io/food-funday/images/food.png" alt="">
+              <h3>Pro</h3>
+            </div>
+            <div class="panel-body">
+              <p><strong>$60/<span>Month</span></strong></p>
+            </div>
+            <ul class="list-group">
+              <li class="list-group-item"><i class="fa fa-check"></i> One Website</li>
+              <li class="list-group-item"><i class="fa fa-check"></i> One User</li>
+              <li class="list-group-item"><i class="fa fa-check"></i> 50 GB Bandwidth</li>
+              <li class="list-group-item"><i class="fa fa-check"></i> 2GB Storage</li>
+              <li class="list-group-item"><i class="fa fa-check"></i> Offline work</li>
+              <li class="list-group-item"><i class="fa fa-check"></i> 24x7 Support</li>
+            </ul>
+            <div class="panel-footer"><a href="#">Purchase Now!</a></div>
+          </div>
+        </div>
+
+        <!-- Platinum Plan -->
+        <div class="col-md-4 text-center">
+          <div class="panel panel-pricing">
+            <div class="panel-heading">
+              <img src="https://themewagon.github.io/food-funday/images/coffee.png" alt="">
+              <h3>Platinum</h3>
+            </div>
+            <div class="panel-body">
+              <p><strong>$90/<span>Month</span></strong></p>
+            </div>
+            <ul class="list-group">
+              <li class="list-group-item"><i class="fa fa-check"></i> One Website</li>
+              <li class="list-group-item"><i class="fa fa-check"></i> One User</li>
+              <li class="list-group-item"><i class="fa fa-check"></i> 100 GB Bandwidth</li>
+              <li class="list-group-item"><i class="fa fa-check"></i> 2GB Storage</li>
+              <li class="list-group-item"><i class="fa fa-check"></i> Offline work</li>
+              <li class="list-group-item"><i class="fa fa-check"></i> 24x7 Support</li>
+            </ul>
+            <div class="panel-footer"><a href="#">Purchase Now!</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Reservation -->
+  <div id="reservation" class="pad-top-100 pad-bottom-100">
+    <div class="container text-center">
+      <h2 class="block-title">Reservation</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <form>
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text" class="form-control" placeholder="Name" required>
+              </div>
+              <div class="col-md-6 form-group">
+                <input type="email" class="form-control" placeholder="E-Mail ID" required>
+              </div>
+              <div class="col-md-6 form-group">
+                <input type="text" class="form-control" placeholder="Contact No." required>
+              </div>
+              <div class="col-md-6 form-group">
+                <input type="number" class="form-control" placeholder="No of Persons" required>
+              </div>
+              <div class="col-md-6 form-group">
+                <input type="time" class="form-control" placeholder="Time" required>
+              </div>
+              <div class="col-md-6 form-group">
+                <input type="date" class="form-control" required>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">BOOK MY TABLE</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <!-- Newsletter -->
+  <div class="footer-news">
+    <h2 class="ft-title">Newsletter</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+    <form>
+      <input type="email" placeholder="Enter Your E-Mail Id">
+      <a href="#"><i class="fa fa-paper-plane-o"></i></a>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer">
+    <div class="container footer-section">
+      <div>
+        <h3>About Us</h3>
+        <p>Aenean commodo ligula eget dolor aenean massa.</p>
+        <p>
+          <i class="fa fa-facebook"></i>
+          <i class="fa fa-google-plus"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-pinterest"></i>
+          <i class="fa fa-linkedin"></i>
+        </p>
+      </div>
+      <div>
+        <h3>New Menu</h3>
+        <ul>
+          <li>Italian Bomba Sandwich</li>
+          <li>Double Dose of Pork Belly</li>
+          <li>Spicy Thai Noodles</li>
+          <li>Triple Truffle Trotters</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact Us</h3>
+        <p>6 E Esplanade, St Albans VIC 3021, Australia</p>
+        <p>+91 80005 89080</p>
+        <p>support@foodfunday.com</p>
+      </div>
+      <div>
+        <h3>Opening Hours</h3>
+        <p>Mon - Thu: 11AM - 9PM</p>
+        <p>Fri - Sat: 11AM - 5PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 All Rights Reserved by Chakradhar.
+    </div>
+  </div>
+
+</body>
+</html>
